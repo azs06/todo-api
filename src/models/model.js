@@ -10,7 +10,6 @@ class Model {
   async select(columns, clause) {
     let query = `SELECT ${columns} FROM ${this.table}`;
     if (clause) query += clause;
-    console.log(query)
     return this.pool.query(query);
   }
   async insertWithReturn(columns, values) {
@@ -37,7 +36,6 @@ class Model {
     // Return a complete query string
     const sqlQuery =  query.join(' ');
     const values = Object.values(data)
-    console.log(sqlQuery, values)
     return this.pool.query(sqlQuery, values)
   }
  

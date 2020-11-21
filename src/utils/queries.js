@@ -5,8 +5,7 @@ CREATE TABLE IF NOT EXISTS todo_items (
   description TEXT NOT NULL,
   added_date DATE NOT NULL DEFAULT CURRENT_DATE,
   completed BOOLEAN DEFAULT FALSE
-  )
-  `;
+)`;
 
 export const insertTodo = `
 INSERT INTO todo_items(description, completed)
